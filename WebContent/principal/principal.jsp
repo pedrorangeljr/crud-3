@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Página de erro</title>
+<title>Insert title here</title>
 </head>
 <body>
-   <h1>Erro ao entrar no Sistema </h1>
+
+<%out.println("Tela principal depois do Login"); %>
+
 </body>
 </html>
