@@ -25,7 +25,7 @@
 
                     <form method="post" action="ServletLogin">
 
-                        <input type="hidden" value="<% request.getParameter("url"); %>" name="url">
+                        <input type="hidden" value="<%= request.getParameter("url") %>" name="url">
                         <div class="card ">
 
                             <h1>Login</h1>
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="update ml-auto mr-auto">
-                                        <button type="submit" class="btn btn-success btn-round">Logar</button>
+                                        <input type="submit" class="btn btn-success btn-round" value="Logar"></>
                                     </div>
 
                                 </div>
