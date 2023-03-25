@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 import conexao.SingleConnection;
 
 
-@WebFilter("/FilterAutenticacao")
+@WebFilter(urlPatterns = { "/principal/*" })
 public class FilterAutenticacao implements Filter {
 
 	private static Connection connection;
@@ -30,6 +30,15 @@ public class FilterAutenticacao implements Filter {
 	
 	public void destroy() {
 		
+		try {
+
+			connection.close();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		
 	}
 
 	
@@ -37,7 +46,7 @@ public class FilterAutenticacao implements Filter {
 		
 		try {
 			
-			HttpServletRequest req = (HttpServletRequest) (request);
+			HttpServletRequest req = (HttpServletRequest) request;
 			HttpSession session = req.getSession();
 			
 			String usuarioLogado = (String) session.getAttribute("usuario");
