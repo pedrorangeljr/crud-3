@@ -40,6 +40,16 @@
                     <label for="exampleInputPassword1">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email">
                 </div>
+                
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">Login</label>
+                    <input type="text" class="form-control" id="login" name="login">
+                </div>
+                
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" id="senha" name="senha">
+                </div>
 
                 <button type="submit" class="btn btn-success">Cadastrar Usuário</button>
             </form>
