@@ -50,7 +50,7 @@ public class ServletLogin extends HttpServlet {
 
 					if (url == null || url.equals("null")) {
 
-						url = "principal/principal.jsp";
+						url = "principal/acessoLiberado.jsp";
 					}
 
 					RequestDispatcher dispatcher = request.getRequestDispatcher(url);

@@ -24,7 +24,7 @@
             <h2>Cadastro de Usuários</h2>
             <br />
 
-            <form action="ServletUsuario" method="post">
+            <form action="<%=request.getContextPath()%>/ServletUsuario" method="post">
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nome</label>
