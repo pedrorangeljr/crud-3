@@ -27,27 +27,27 @@
             <form action="<%=request.getContextPath()%>/ServletUsuario" method="post">
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nome</label>
+                    <label>Nome</label>
                     <input type="text" class="form-control" id="nome" name="nome">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Sobrenome</label>
+                    <label>Sobrenome</label>
                     <input type="text" class="form-control" id="sobrenome" name="sobrenome">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputPassword1">E-mail</label>
+                    <label>E-mail</label>
                     <input type="email" class="form-control" id="email" name="email">
                 </div>
                 
                  <div class="form-group">
-                    <label for="exampleInputPassword1">Login</label>
+                    <label>Login</label>
                     <input type="text" class="form-control" id="login" name="login">
                 </div>
                 
                  <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
+                    <label>Senha</label>
                     <input type="password" class="form-control" id="senha" name="senha">
                 </div>
 

@@ -16,7 +16,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 
-<title>Hello, world!</title>
+<title>Cadastro de Usuário</title>
 </head>
 
 <body>
@@ -25,7 +25,8 @@
 
 		<br />
 		<h2>Cadastro de Usuário</h2>
-		<br /> <a class="btn btn-secondary">Cadastrar Usuário</a> <br /> <br />
+		
+		<br /> <a href="principal/cadastro.jsp"class="btn btn-secondary">Cadastrar Usuário</a> <br /> <br />
 
 		<table class="table table-striped">
 			<thead>
@@ -47,7 +48,7 @@
 						<td><c:out value="${usuario.sobrenome }"></c:out></td>
 						<td><c:out value="${usuario.email }"></c:out></td>
 						<td><a href="" class="btn btn-warning">Editar</a></td>
-						<td><a href="" class="btn btn-danger">Excluir</a></td>
+						<td><a href="ServletUsuario?acao=excluir&usuario=${usuario.id }" class="btn btn-danger">Excluir</a></td>
 					</tr>
 				</c:forEach>
 

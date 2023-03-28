@@ -30,8 +30,18 @@ public class ServletUsuario extends HttpServlet {
 		try {
 			
 			String acao = request.getParameter("acao");
+			String usuario = request.getParameter("excluir");
 			
-			if(acao.equalsIgnoreCase("listarTodos")) {
+			if(acao.equalsIgnoreCase("excluir")) {
+				
+				daoUsuario.deletar("excluir");
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("principal/principal.jsp");
+				request.setAttribute("usuarios", daoUsuario.listarUsuarios());
+				dispatcher.forward(request, response);
+			}
+			
+			else if(acao.equalsIgnoreCase("listarTodos")) {
 				
 				RequestDispatcher dispatcher = request.getRequestDispatcher("principal/principal.jsp");
 				request.setAttribute("usuarios", daoUsuario.listarUsuarios());
@@ -53,6 +63,7 @@ public class ServletUsuario extends HttpServlet {
 			String id = request.getParameter("id");
 			String nome = request.getParameter("nome");
 			String sobrenome = request.getParameter("sobrenome");
+			String email = request.getParameter("email");
 			String login = request.getParameter("login");
 			String senha = request.getParameter("senha");
 			
@@ -61,6 +72,7 @@ public class ServletUsuario extends HttpServlet {
 			usuario.setId(id != null && !id.isEmpty() ? Long.parseLong(id) : 0);
 			usuario.setNome(nome);
 			usuario.setSobrenome(sobrenome);
+			usuario.setEmail(email);
 			usuario.setLogin(login);
 			usuario.setSenha(senha);
 			
