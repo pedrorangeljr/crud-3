@@ -48,7 +48,7 @@
 						<td><c:out value="${usuario.sobrenome }"></c:out></td>
 						<td><c:out value="${usuario.email }"></c:out></td>
 						<td><a href="" class="btn btn-warning">Editar</a></td>
-						<td><a href="ServletUsuario?acao=excluir&usuario=${usuario.id }" class="btn btn-danger">Excluir</a></td>
+						<td><a href="/ServletUsuario?acao=excluir&usuario=${usuario.id }" class="btn btn-danger">Excluir</a></td>
 					</tr>
 				</c:forEach>
 

@@ -34,7 +34,7 @@ public class ServletUsuario extends HttpServlet {
 			
 			if(acao.equalsIgnoreCase("excluir")) {
 				
-				daoUsuario.deletar("excluir");
+				daoUsuario.deletar(usuario);
 				
 				RequestDispatcher dispatcher = request.getRequestDispatcher("principal/principal.jsp");
 				request.setAttribute("usuarios", daoUsuario.listarUsuarios());
